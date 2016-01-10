@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.5/react.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.5/react-dom.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>hello,react!</h1>
+	<div id="example"></div>
+    <div id="text"></div>
+    <script type="text/babel">
+      ReactDOM.render(
+        <h1>Hello, world!</h1>,
+        document.getElementById('example')
+      );
+    </script>
+    <script type="text/javascript">
+//     $.ajax({
+//         type: "POST",   //访问WebService使用Post方式请求
+//         contentType: "application/json", 
+//         url: "http://localhost:8080/", //调用WebService的地址和方法名称组合 ---- WsURL/方法名
+//         data: "{}",  //这里是要传递的参数，格式为 data: "{paraName:paraValue}",下面将会看到       
+//         dataType: 'jsonP',   //WebService 会返回Json类型
+//         success: function(result) {     //回调函数，result，返回值
+//             alert(result);
+//         }
+//     });
+    $.ajax({
+        url: "http://localhost:8080/",
+        type: 'GET',
+        dataType: 'JSONP',//here
+        contentType:"application/json",
+        data:"{}",
+        success: function (data) {
+        	alert(data);
+        }
+    });
+    </script>
+</body>
+</html>
