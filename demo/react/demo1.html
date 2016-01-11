@@ -30,21 +30,34 @@
 //         contentType: "application/json", 
 //         url: "http://localhost:8080/", //调用WebService的地址和方法名称组合 ---- WsURL/方法名
 //         data: "{}",  //这里是要传递的参数，格式为 data: "{paraName:paraValue}",下面将会看到       
-//         dataType: 'jsonP',   //WebService 会返回Json类型
+//         dataType: 'json',   //WebService 会返回Json类型
 //         success: function(result) {     //回调函数，result，返回值
 //             alert(result);
 //         }
 //     });
-    $.ajax({
-        url: "http://localhost:8080/",
-        type: 'GET',
-        dataType: 'JSONP',//here
-        contentType:"application/json",
-        data:"{}",
-        success: function (data) {
-        	alert(data);
-        }
+    
+    $(document).ready(function() {
+        $.ajax({
+        	type: "GET",
+        	contentType: "application/json", 
+        	data: "{}",
+            url: "http://localhost:8080"
+        }).then(function(data, status, jqxhr) {
+           $('.greeting-id').append(data.id);
+           $('.greeting-content').append(data.content);
+           console.log(jqxhr);
+        });
     });
+//     $.ajax({
+//         url: "http://localhost:8080/",
+//         type: 'GET',
+//         dataType: 'json',//here
+//         contentType:"application/json",
+//         data:"{}",
+//         success: function (data) {
+//         	alert(data);
+//         }
+//     });
     </script>
 </body>
 </html>
