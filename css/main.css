@@ -1,0 +1,76 @@
+header{
+	height: 800px;
+}
+nav{
+	background-color: #ccc;
+	height: 50px;
+}
+nav ul li,nav .logo{
+	display: inline-block;/*锁定在一行*/
+	line-height: 50px;/*行高*/
+	 margin-right: 20px;/*定位*/ 
+}
+nav ul {
+	margin: 0;
+	list-style: none;/*列表样式为none*/
+	float: right;
+}
+
+nav ul li a{
+	text-decoration: none;
+	line-height: inherit;
+	display: inline-block;
+	height: inherit;
+}
+
+nav .logo{
+	padding-left: 10px; 
+	float: left;
+	font-size: 20px;/*字体大小*/
+	font-weight: 700;/*粗体大小*/
+	letter-spacing: 2px;/*字体间距*/
+}
+.logo a{
+	text-decoration: none;
+	color: #fff;
+}
+#banner {
+	height: 700px;
+	background-color: #777;
+}
+#banner .inner{
+	max-width: 300px;
+	text-align: center;
+	margin: 0 auto;
+	position: relative;
+	top: 120px;
+}
+#banner .inner h1{
+	margin: 0;
+}
+button{
+	border: none;/*去边框*/
+	background: #333;
+	color: #eee;
+	padding: 10px;/*按钮大小*/
+	/*padding: 10px 40px;*/
+}
+#banner .inner .more{
+	margin-top: 320px;/*应该是距离顶部*/
+}
+.sub-heading{
+	line-height: 30px;
+	margin: 10px;/*布局*/
+}
+/*.content{
+	margin: 0;
+}*/
+.wrapper{
+	max-width: 1080px;
+	margin: 0 auto;
+}
+.green-section{
+	text-align: center;
+	background: #1ECCAD;
+	height: 700px;
+}

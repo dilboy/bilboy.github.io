@@ -1,0 +1,12 @@
+header{
+	height: 750px;
+	background: #777;
+}
+.content{
+	height: 750px;
+	background: #ddd;
+}
+.footer{
+	height: 750px;
+	background: #82F190;
+}
